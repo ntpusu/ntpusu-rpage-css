@@ -1,0 +1,144 @@
+/*
+ * ntpusu-rpage.css
+ * 
+ * Description:
+ *   Custom stylesheet created by the National Taipei University Student Union (NTPUSU)
+ *   to align the university-provided R-page CMS with NTPUSU design standards.
+ *   Other NTPU departments are welcome to use this stylesheet.
+ * 
+ * Maintenance Note for NTPUSU IT Staff:
+ *   Ensure the file is named `ntpusu-rpage.css` prior to uploading.
+ *   Upload location: Document Management -> Site Common Files.
+ *   Do not use Chinese characters in the file name to prevent automated system renaming.
+ */
+
+:root {
+  --ntpusu-brown-dark: #554439;
+  --ntpusu-brown-light: #635146;
+}
+
+/* Make footer maintainance info farther and smaller */
+div.module-inner div.mcont div.mattr{
+  margin-top: 1.5rem;
+}
+span.mattr-name, span.mattr-val {
+  font-size: 95%;
+}
+
+/* Links */
+a.ntpusu-link{
+  color: var(--ntpusu-brown-dark);
+}
+a.ntpusu-link:hover{
+  color: var(--ntpusu-brown-dark);
+  text-decoration: underline;
+}
+a.ntpusu-link-u{
+  color: var(--ntpusu-brown-dark);
+  text-decoration: underline;
+}
+a.ntpusu-link-u:hover{
+  color: var(--ntpusu-brown-light);
+  text-decoration: none;
+}
+
+/* keywords */
+span.ntpusu-keywords{
+  color: var(--ntpusu-brown-dark);
+  font-weight: bold;
+}
+
+/* Buttons */
+a.ntpusu-button {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+  background-color: var(--ntpusu-brown-light);
+  border: 1px solid var(--ntpusu-brown-light);
+  border-radius: 0.375rem;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    color .15s ease-in-out,
+    background-color .15s ease-in-out,
+    border-color .15s ease-in-out,
+    box-shadow .15s ease-in-out;
+}
+
+a.ntpusu-button:hover {
+  filter: brightness(0.92);
+  color: #fff;
+  text-decoration: none;
+}
+
+a.ntpusu-button:active {
+  filter: brightness(0.85);
+}
+
+a.ntpusu-button:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--ntpusu-brown-light) 35%, transparent);
+}
+
+a.ntpusu-button:disabled,
+a.ntpusu-button.disabled,
+a.ntpusu-button[aria-disabled="true"] {
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+/* 
+  Add mark under the title in information detail page
+*/
+
+div.module.module-detail.md_style1 > div.module-inner > section.mb > div.mpgtitle {
+    margin-bottom: 0.75rem;
+}
+
+div.module.module-detail.md_style1 > div.module-inner > section.mb > div.mpgtitle > h2.hdline {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+div.module.module-detail.md_style1 > div.module-inner > section.mb > div.mpgtitle > h2.hdline::after {
+    content: "";
+    position: absolute;
+
+    left: -0.25em;
+    width: calc(100% + 0.35em);
+
+    height: 0.5em;
+    bottom: 0.12em;
+
+    background: rgba(232, 214, 189, 0.5);
+
+    border-radius: 3px 5px 4px 2px;
+
+    z-index: -1;
+}
+
+/* 
+  Subtitle
+*/
+
+div.module-inner .meditor h3.ntpusu-heading::before {
+    content: "\258F";	
+	display: inline-block;	
+	color:var(--ntpusu-brown-light);
+}
+
+/* 
+  The serial number of a proposal in the metting minute (for Sanxia Campus Parliament)
+*/
+
+span.as-proposal-serial-number {
+  background-color: #121212;
+  color: #e0e0e0;
+}
